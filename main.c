@@ -36,6 +36,19 @@ MODE_T RunT[]= {
 };
 
 char inifile[256];
+struct _NU_DATA_T nudata;
+NORBOOT_MMC_HEAD mmc_head;
+libusb_context *ctx;
+libusb_device_handle *handle;
+unsigned int csg_usb_index;
+#define MAX_DEV 8
+libusb_device *dev_arr[MAX_DEV];
+unsigned int dev_count;
+unsigned int enable_all_device;
+PACK_T pack;
+
+
+
 
 int check_strlen(const struct dirent *dir)
 {
